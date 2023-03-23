@@ -71,7 +71,8 @@ def homepage(request):
     stuff_for_frontend = {'data': matched_data, 'today': today, 'islamic_date': date[0], 'islamic_month': date[1], "islamic_month_name":  month_numbers[str(date[1])], "saal": date[2]}
     # stuff_for_frontend = {'data': matched_data, 'today': today, 'islamic_date': 'str(date.tareekh)', 'islamic_month': 'str(date.month_islamic)', "islamic_month_name": "Muhammad Mohib"}
 
-    return render(request, 'home.html', stuff_for_frontend)
+    return HttpResponse("Muhammad Mohib")
+# render(request, 'home.html', stuff_for_frontend)
 
 
 @csrf_exempt
